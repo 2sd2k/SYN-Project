@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate Change Temperature Timeline</title>
+    <link rel="stylesheet" href="climate-timeline.css">
+</head>
+<body>
+
+<header>
+    <h1>What If the Planet Heats Up?</h1>
+    <p>Since the Industrial Revolution, Earth has warmed ~1.1&deg;C due to human-caused greenhouse gas emissions. Drag the slider to explore what happens as temperatures rise further.</p>
+</header>
+
+<section class="slider-section">
+    <div class="temp-display" id="tempDisplay">+1.1°C</div>
+    <div class="temp-label">above pre-industrial levels</div>
+    <div class="slider-container">
+        <input type="range" id="tempSlider" min="1.1" max="4.8" step="0.1" value="1.1">
+        <div class="slider-labels">
+            <span>+1.1°C (Now)</span>
+            <span>+2°C</span>
+            <span>+3°C</span>
+            <span>+4°C</span>
+            <span>+4.8°C</span>
+        </div>
+    </div>
+</section>
+
+<section class="timeline" id="timeline">
+
+    <div class="milestone" data-threshold="1.1">
+        <div class="milestone-dot"></div>
+        <div class="milestone-content">
+            <div class="milestone-icon">🌡️</div>
+            <div class="milestone-temp">+1.1°C &mdash; Today</div>
+            <div class="milestone-title">Where We Are Now</div>
+            <div class="milestone-desc">Extreme and more frequent wildfires, hurricanes, heat waves, and droughts are already threatening vulnerable communities and biodiversity worldwide.</div>
+        </div>
+    </div>
+
+    <div class="milestone" data-threshold="2.0">
+        <div class="milestone-dot"></div>
+        <div class="milestone-content">
+            <div class="milestone-icon">🧊</div>
+            <div class="milestone-temp">+2.0°C</div>
+            <div class="milestone-title">Arctic Ice Gone, Coral Reefs Lost</div>
+            <div class="milestone-desc">Arctic sea ice melts completely during summer. Coral reefs virtually disappear, devastating marine ecosystems and the communities that depend on them.</div>
+        </div>
+    </div>
+
+    <div class="milestone" data-threshold="3.0">
+        <div class="milestone-dot"></div>
+        <div class="milestone-content">
+            <div class="milestone-icon">🌀</div>
+            <div class="milestone-temp">+3.0°C</div>
+            <div class="milestone-title">Dangerous Tipping Points</div>
+            <div class="milestone-desc">Irreversible changes hit the Arctic and Amazon. Feedback loops accelerate warming beyond human control, reshaping Earth's climate systems permanently.</div>
+        </div>
+    </div>
+
+    <div class="milestone" data-threshold="4.0">
+        <div class="milestone-dot"></div>
+        <div class="milestone-content">
+            <div class="milestone-icon">🌊</div>
+            <div class="milestone-temp">+4.0°C</div>
+            <div class="milestone-title">Civilization Under Threat</div>
+            <div class="milestone-desc">Widespread food insecurity reverses economic development. Hundreds of millions face homes inundated by rising seas. Global average incomes could drop by 23%.</div>
+        </div>
+    </div>
+
+    <div class="milestone" data-threshold="4.8">
+        <div class="milestone-dot"></div>
+        <div class="milestone-content">
+            <div class="milestone-icon">💀</div>
+            <div class="milestone-temp">+4.8°C &mdash; Worst Case by 2100</div>
+            <div class="milestone-title">An Unrecognizable Planet</div>
+            <div class="milestone-desc">The upper end of projected warming by 2100 at current rates. The planet becomes fundamentally altered — a scenario that could spell disaster for human civilization.</div>
+        </div>
+    </div>
+
+</section>
+
+<section class="impact-section">
+    <h2>Impact Severity at Current Setting</h2>
+
+    <div class="impact-bar-group">
+        <div class="impact-bar-label">
+            <span>🔥 Extreme Weather</span>
+            <span id="weatherVal">—</span>
+        </div>
+        <div class="impact-bar-track">
+            <div class="impact-bar-fill" id="weatherBar"></div>
+        </div>
+    </div>
+
+    <div class="impact-bar-group">
+        <div class="impact-bar-label">
+            <span>🌊 Sea Level Rise Risk</span>
+            <span id="seaVal">—</span>
+        </div>
+        <div class="impact-bar-track">
+            <div class="impact-bar-fill" id="seaBar"></div>
+        </div>
+    </div>
+
+    <div class="impact-bar-group">
+        <div class="impact-bar-label">
+            <span>🌿 Biodiversity Loss</span>
+            <span id="bioVal">—</span>
+        </div>
+        <div class="impact-bar-track">
+            <div class="impact-bar-fill" id="bioBar"></div>
+        </div>
+    </div>
+
+    <div class="impact-bar-group">
+        <div class="impact-bar-label">
+            <span>🍽️ Food Insecurity</span>
+            <span id="foodVal">—</span>
+        </div>
+        <div class="impact-bar-track">
+            <div class="impact-bar-fill" id="foodBar"></div>
+        </div>
+    </div>
+
+    <div class="impact-bar-group">
+        <div class="impact-bar-label">
+            <span>💰 Economic Impact</span>
+            <span id="econVal">—</span>
+        </div>
+        <div class="impact-bar-track">
+            <div class="impact-bar-fill" id="econBar"></div>
+        </div>
+    </div>
+</section>
+
+<script src="climate-timeline.js"></script>
+
+</body>
+</html>
